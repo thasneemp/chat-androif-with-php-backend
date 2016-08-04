@@ -143,7 +143,7 @@ public class Login extends Activity {
                     loginThread.start();
 
                 } else {
-					/*
+                    /*
 					 * Username or Password is not filled, alert the user
 					 */
                     showDialog(FILL_BOTH_USERNAME_AND_PASSWORD);

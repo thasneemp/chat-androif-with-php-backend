@@ -10,7 +10,6 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
 
 import org.xml.sax.SAXException;
 
@@ -36,7 +35,6 @@ import test.launcher.mummu.chatexamplegooglerecomended.interfaces.IUpdateData;
 import test.launcher.mummu.chatexamplegooglerecomended.tools.FriendController;
 import test.launcher.mummu.chatexamplegooglerecomended.tools.XMLHandler;
 import test.launcher.mummu.chatexamplegooglerecomended.types.FriendInfo;
-
 
 
 public class IMService extends Service implements IAppManager, IUpdateData {

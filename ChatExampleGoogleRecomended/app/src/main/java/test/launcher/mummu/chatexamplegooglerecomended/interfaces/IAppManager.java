@@ -2,21 +2,30 @@ package test.launcher.mummu.chatexamplegooglerecomended.interfaces;
 
 
 public interface IAppManager {
-	
-	public String getUsername();
-	public boolean sendMessage(String username, String message);
 
-	public String authenticateUser(String usernameText, String passwordText); 
-	public void messageReceived(String message);
-//	public void setUserKey(String value);
-	public boolean isNetworkConnected();
-	public boolean isUserAuthenticated();
-	public String getLastRawFriendList();
-	public void exit();
-	public String signUpUser(String usernameText, String passwordText, String email);
-	public String addNewFriendRequest(String friendUsername);
-	public String sendFriendsReqsResponse(String approvedFriendNames,
-										  String discardedFriendNames);
+    String getUsername();
 
-	
+    boolean sendMessage(String username, String message);
+
+    String authenticateUser(String usernameText, String passwordText);
+
+    void messageReceived(String message);
+
+    //	 void setUserKey(String value);
+    boolean isNetworkConnected();
+
+    boolean isUserAuthenticated();
+
+    String getLastRawFriendList();
+
+    void exit();
+
+    String signUpUser(String usernameText, String passwordText, String email);
+
+    String addNewFriendRequest(String friendUsername);
+
+    String sendFriendsReqsResponse(String approvedFriendNames,
+                                   String discardedFriendNames);
+
+
 }
