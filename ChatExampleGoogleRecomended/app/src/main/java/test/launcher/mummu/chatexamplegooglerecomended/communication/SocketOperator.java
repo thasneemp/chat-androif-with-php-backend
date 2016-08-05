@@ -20,7 +20,8 @@ import test.launcher.mummu.chatexamplegooglerecomended.interfaces.IAppManager;
 import test.launcher.mummu.chatexamplegooglerecomended.interfaces.ISocketOperator;
 
 public class SocketOperator implements ISocketOperator {
-    private static final String AUTHENTICATION_SERVER_ADDRESS = "http://192.168.2.73/Server/";
+//    private static final String AUTHENTICATION_SERVER_ADDRESS = "http://dev.muhammedthasneem.info/";
+    private static final String AUTHENTICATION_SERVER_ADDRESS = "http://192.168.2.73/Server";
 
     private int listeningPort = 0;
 

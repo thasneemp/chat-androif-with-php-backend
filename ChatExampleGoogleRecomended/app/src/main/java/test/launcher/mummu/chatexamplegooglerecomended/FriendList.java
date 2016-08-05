@@ -29,6 +29,7 @@ import android.widget.Toast;
 import test.launcher.mummu.chatexamplegooglerecomended.interfaces.IAppManager;
 import test.launcher.mummu.chatexamplegooglerecomended.services.IMService;
 import test.launcher.mummu.chatexamplegooglerecomended.tools.FriendController;
+import test.launcher.mummu.chatexamplegooglerecomended.tools.NotificationBuilderIM;
 import test.launcher.mummu.chatexamplegooglerecomended.types.FriendInfo;
 import test.launcher.mummu.chatexamplegooglerecomended.types.STATUS;
 
@@ -205,12 +206,15 @@ public class FriendList extends AppCompatActivity implements AdapterView.OnItemC
 
                 }
                 Log.d("TAG", "updateData: " + tmp);
+                Intent i = new Intent(this, UnApprovedFriendList.class);
+                i.putExtra(FriendInfo.FRIEND_LIST, tmp);
+                NotificationBuilderIM instance = NotificationBuilderIM.getInstance(this);
+                instance.CreateNotification("You have new friend request(s)", "Please open", i, 0);
 //                Notification notification = new Notification(R.drawable.stat_sample,
 //                        getText(R.string.new_friend_request_exist),
 //                        System.currentTimeMillis());
 //
-//                Intent i = new Intent(this, UnApprovedFriendList.class);
-//                i.putExtra(FriendInfo.FRIEND_LIST, tmp);
+//
 //
 //                PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
 //                        i, 0);
@@ -221,9 +225,9 @@ public class FriendList extends AppCompatActivity implements AdapterView.OnItemC
 //
 //
 ////				NM.notify(R.string.new_friend_request_exist, notification);
-                Intent i = new Intent(this, UnApprovedFriendList.class);
-                i.putExtra(FriendInfo.FRIEND_LIST, tmp);
-                startActivity(i);
+//                Intent i = new Intent(this, UnApprovedFriendList.class);
+//                i.putExtra(FriendInfo.FRIEND_LIST, tmp);
+//                startActivity(i);
             } else {
                 // if any request exists, then cancel it
                 NM.cancel(R.string.new_friend_request_exist);
