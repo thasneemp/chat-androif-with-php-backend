@@ -209,25 +209,8 @@ public class FriendList extends AppCompatActivity implements AdapterView.OnItemC
                 Intent i = new Intent(this, UnApprovedFriendList.class);
                 i.putExtra(FriendInfo.FRIEND_LIST, tmp);
                 NotificationBuilderIM instance = NotificationBuilderIM.getInstance(this);
-                instance.CreateNotification("You have new friend request(s)", "Please open", i, 0);
-//                Notification notification = new Notification(R.drawable.stat_sample,
-//                        getText(R.string.new_friend_request_exist),
-//                        System.currentTimeMillis());
-//
-//
-//
-//                PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-//                        i, 0);
-//
-//
-//                notification.contentIntent = contentIntent;
-//                notification.tickerText = "You have new friend request(s)";
-//
-//
-////				NM.notify(R.string.new_friend_request_exist, notification);
-//                Intent i = new Intent(this, UnApprovedFriendList.class);
-//                i.putExtra(FriendInfo.FRIEND_LIST, tmp);
-//                startActivity(i);
+                instance.CreateNotification("You have new friend request(s)", "Please open", i, R.string.new_friend_request_exist);
+
             } else {
                 // if any request exists, then cancel it
                 NM.cancel(R.string.new_friend_request_exist);

@@ -23,7 +23,6 @@
         <activity android:name=".Messaging" />
         <activity android:name=".SignUp" />
         <activity android:name=".UnApprovedFriendList" />
-
         <service android:name=".services.IMService" />
     </application>
 
